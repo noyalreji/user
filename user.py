@@ -6,21 +6,21 @@ class User:
         # adding the deposit method
     def make_deposit(self, amount):	# takes an argument that is the amount of the deposit
         self.account_balance += amount	# the specific user's account increases by the amount of the value received
-    
+        return self
     # add a withdrawal method
     def make_withdrawal(self, amount):
         self.account_balance -= amount
-
+        return self
     # BONUS: Add a transfer_money method; have the first user transfer money to the third user and then print both users' balances
     def transfer_money(self, user, amount):
         self.account_balance -= amount
         user.account_balance += amount
-        
+        return self
     
     # display user balance
     def display_user_balance(self):
         print(f'User: {self.name} Balance: {self.account_balance}')
-
+        return self
 #Create 3 instances for the User class
 user1 = User('Noyal Jacob', 'noyal@gmail.com')
 user2 = User('Mike Jon', 'mja@gmail.com')
